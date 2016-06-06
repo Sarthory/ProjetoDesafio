@@ -2,6 +2,8 @@
 package desafioselecao;
 
 public class DateTimeGUI extends javax.swing.JFrame {
+    
+    DateWork data = new DateWork();
 
     public DateTimeGUI() {
         initComponents();
@@ -86,14 +88,12 @@ public class DateTimeGUI extends javax.swing.JFrame {
     
     // Ao carregar o Frame organiza os Labels de exibição
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        DateWork data = new DateWork();
         lblDataOut.setText(data.setDate());
         lblGreet.setText(data.setGreet());
     }//GEN-LAST:event_formWindowOpened
 
     // Dispara o método para incrementar os minutos e organiza os Labels
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        DateWork data = new DateWork();
         data.increment();
         lblDataOut.setText(data.setDate());
         lblGreet.setText(data.setGreet());
@@ -101,7 +101,6 @@ public class DateTimeGUI extends javax.swing.JFrame {
 
     // Dispara o método para decrementar os minutos e organiza os Labels
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
-        DateWork data = new DateWork();
         data.decrement();
         lblDataOut.setText(data.setDate());
         lblGreet.setText(data.setGreet());
